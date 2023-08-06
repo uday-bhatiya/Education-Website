@@ -481,8 +481,98 @@ header .navbar .btn:hover {
     transition: .2s ease;
 }
 
+/* ABOUT PAGE */
 
+.banner {
+    width: 100vw;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
 
+.about {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .images {
+    width: 50%;
+}
+
+.about .images img {
+    width: 100%;
+}
+
+.about-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.5)), url(assets/back1.jpg);
+}
+
+.about-banner h2 {
+    font-size: 4rem;
+    color: white;
+    font-weight: 600;
+}
+
+.about .container {
+    padding: 0 0 0 4rem;
+    width: 40%;
+}
+
+.about .container .info h3 {
+    font-size: 3rem;
+}
+
+.about .container .info p {
+    font-size: 1.4rem;
+    color: #3d3b3b;
+}
+
+.about .container .course {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 3rem;
+}
+
+.about .container .course .img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.about .container .course .img img {
+    width: 100%;
+}
+
+.about .container .course .text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about .container .course .text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.trust .trust-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.trust .trust-container .img {
+    width: 10rem;
+    margin-block: 2rem;
+}
+
+.trust .trust-container .img img {
+    width: 100%;
+}
 
 
 
@@ -502,6 +592,18 @@ header .navbar .btn:hover {
     .footer .container {
         flex-wrap: wrap;
         gap: 3rem;
+    }
+
+    .about .images {
+        width: 60%;
+    }
+
+    .about .container .info h3 {
+        font-size: 2rem;
+    }
+
+    .about .container .info p {
+        font-size: 1.2rem;
     }
 
 }
@@ -579,8 +681,25 @@ header .navbar .btn:hover {
         right: 5%;
     }
 
-
     .register {
+        flex-wrap: wrap;
+    }
+
+    .about {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .about .images {
+        width: 80%;
+    }
+
+    .about .container {
+        width: 80%;
+        padding: 0;
+    }
+
+    .trust .trust-container {
         flex-wrap: wrap;
     }
 }
@@ -623,6 +742,7 @@ header .navbar .btn:hover {
         top: 61%;
         right: 5%;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -630,4 +750,9 @@ header .navbar .btn:hover {
     .footer {
         padding: 4rem 1%;
     }
+
+    header .logo {
+        width: 22%;
+    }
+
 }
