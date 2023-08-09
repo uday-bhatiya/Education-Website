@@ -7,6 +7,7 @@
     text-transform: capitalize;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    resize: none;
 }
 
 html {
@@ -390,12 +391,12 @@ header .navbar .btn:hover {
     margin-block: 1rem;
 }
 
-.community .profile-container .social-icon {
+.social-icon {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
-.community .profile-container .social-icon i {
+.social-icon i {
     font-size: 1.5rem;
     padding: 1.1rem;
     margin: 0 .2rem;
@@ -406,7 +407,7 @@ header .navbar .btn:hover {
     transition: .2s ease;
 }
 
-.community .profile-container .social-icon i:hover {
+.social-icon i:hover {
     color: white;
     background-color: rgb(14, 14, 71);
 }
@@ -486,6 +487,7 @@ header .navbar .btn:hover {
 .banner {
     width: 100vw;
     height: 40vh;
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.5)), url(assets/back1.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -505,14 +507,13 @@ header .navbar .btn:hover {
     width: 100%;
 }
 
-.about-banner {
+.banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.5)), url(assets/back1.jpg);
 }
 
-.about-banner h2 {
+.banner h2 {
     font-size: 4rem;
     color: white;
     font-weight: 600;
@@ -637,6 +638,87 @@ header .navbar .btn:hover {
     color: rgb(14, 14, 71);
 }
 
+.course-heading{
+    margin-top: 2rem;
+}
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.contact-container .info h3 {
+    font-size: 3rem;
+    color: rgb(14, 14, 71);
+    margin-block: .5rem;
+}
+
+.contact-container .info p {
+    font-size: 1.4rem;
+    color: #3d3b3b;
+    margin-bottom: 2rem;
+}
+
+.contact-container .info h4 {
+    font-size: 1.6rem;
+    color: rgb(14, 14, 71);
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+}
+
+.contact-container .info span {
+    margin-right: 1.5rem;
+    color: rgb(14, 14, 71);
+}
+
+.contact-container .social-icon {
+    text-align: start;
+}
+
+.contact-container .form {
+    background-color: #EEE;
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+.contact-container .form h3 {
+    font-size: 2.5rem;
+    color: rgb(14, 14, 71);
+    margin-block: .5rem;
+}
+
+.contact-container .form p {
+    font-size: 1.2rem;
+    color: #3d3b3b;
+    margin-bottom: 2rem;
+}
+
+.contact-container .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container .form form input {
+    margin-block: 1rem;
+    padding: 1.5rem;
+    border: none;
+}
+
+.contact-container .form form .btn {
+    width: 20rem;
+    margin-block:1rem ;
+    padding: 1.2rem;
+    background-color: rgb(14, 14, 71);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.contact-container .form form .btn:hover {
+    background-color: rgb(31, 31, 125);
+}
 
 
 
@@ -694,10 +776,13 @@ header .navbar .btn:hover {
         border-top: 1px solid black;
         display: none;
         flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  
+        transition: all .2s ease;
     }
 
     .navbar.active {
         display: flex;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
     .navbar a {
@@ -775,6 +860,10 @@ header .navbar .btn:hover {
     .blog .blog-container .blogs .img {
         width: 100%;
     }
+
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (min-width: 480px) {
@@ -827,6 +916,10 @@ header .navbar .btn:hover {
 
     header .logo {
         width: 22%;
+    }
+
+    .contact-container{
+        padding: 2rem;
     }
 
 }
