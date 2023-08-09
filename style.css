@@ -34,7 +34,7 @@ section {
     color: rgb(31, 31, 125);
 }
 
-header .navbar a.active{
+header .navbar a.active {
     color: #f6cd5b;
 }
 
@@ -421,12 +421,12 @@ header .navbar .btn:hover {
     display: flex;
     justify-content: space-around;
 }
- 
+
 .footer .container .raw h3 {
     font-size: 1.6rem;
     margin-block: 1.5rem;
 }
- 
+
 .footer .container .raw a,
 .footer .container .raw .news-p {
     font-size: 1.2rem;
@@ -574,6 +574,68 @@ header .navbar .btn:hover {
     width: 100%;
 }
 
+.blog {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1.5rem;
+}
+
+.blog .blog-container .blogs {
+    margin: 2rem 0;
+}
+
+.blog .blog-container .blogs .img {
+    width: 90%;
+}
+
+.blog .blog-container .blogs .img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.blog .blog-container .blogs .content h3 {
+    font-size: 2.3rem;
+    color: rgb(14, 14, 71);
+    padding-block: 1rem;
+}
+
+.blog .blog-container .blogs .content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+
+.blog .blog-container .blogs .content .btn {
+    padding: 1rem 3rem;
+    margin-block: 2rem;
+    background-color: rgb(14, 14, 71);
+    color: #FFF;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all .2s ease;
+}
+
+.blog .blog-container .blogs .content .btn:hover {
+    background-color: rgb(31, 31, 125);
+}
+
+.blog .category h3 {
+    font-size: 3rem;
+    padding-block: .5rem;
+}
+
+.blog .category p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #6e6e6e;
+    padding-block: .7rem;
+    transition: all .2s ease;
+}
+
+.blog .category p:hover {
+    color: rgb(14, 14, 71);
+}
 
 
 
@@ -634,9 +696,10 @@ header .navbar .btn:hover {
         flex-direction: column;
     }
 
-    .navbar.active{
+    .navbar.active {
         display: flex;
     }
+
     .navbar a {
         display: block;
         text-align: center;
@@ -702,6 +765,16 @@ header .navbar .btn:hover {
     .trust .trust-container {
         flex-wrap: wrap;
     }
+
+    .blog {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .blog .blog-container .blogs .img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 480px) {
@@ -746,6 +819,7 @@ header .navbar .btn:hover {
 }
 
 @media (max-width: 480px) {
+
     section,
     .footer {
         padding: 4rem 1%;
